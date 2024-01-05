@@ -6,7 +6,7 @@ import createAccountPageAssertions from "../../../../pageObject/createAccountPag
 
 const firstName="first";
 const lastName="last";
-const email = "razanUsser"+Math.floor(Math.random()*100)+"@gmail.com"; 
+const email = "email"+Math.floor(Math.random()*100)+"@gmail.com"; 
 
 // // float number  Math.random() 0 - 1 0.1 , 0.2345566778 
 // // Math.floor(Math.random()*100) // integer numbers 0-99 
