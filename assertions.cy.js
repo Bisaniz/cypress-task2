@@ -1,10 +1,10 @@
-class createAccountPageAssertions {
+class addToCartPageAssertions {
     // methods needed for assertions in createAccount page 
   
-    checkPageTitleContainValue(value){
-        cy.get(".page-title").should("contain", value);
+    checkTheDisplayedMessage(message){
+        cy.get("[role=alert]").should("contain", message);
           return this;
       }
   }
   
-  export default createAccountPageAssertions;
+  export default addToCartPageAssertions;

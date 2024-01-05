@@ -1,41 +1,41 @@
-class createAccountPageActions{
+class addToCartPageActions{
     // methods needed in createAccount page 
 
-    openCreateAccountPage(){
-        cy.visit("https://magento.softwaretestingboard.com/customer/account/create/");
+    openMagentoWebsite(){
+        cy.visit("https://magento.softwaretestingboard.com");
         return this;
     }
     
-    typeInFirstNameInputField(firstName){
-        cy.get("#firstname").clear().type(firstName);
+    typeInSearchInputField(productName){
+        cy.get("#search").clear().type(productName);
         return this;
     }
 
-    typeInLastNameInputField(lastName){
-        cy.get("#lastname").clear().type(lastName);
+    clickOnSearchButton(){
+        cy.get(".actions button").click();
         return this;
     }
 
-    typeInEmailInputField(email){
-        cy.get("#email_address").clear().type(email);
+    chooseTheProductName(){
+        cy.get(".product-items li").first().click();
         return this;
     }
 
-    typeInPasswordInputField(password){
-        cy.get("#password").clear().type(password);
+    ChooseTheProductSize(){
+        cy.get(".swatch-attribute.size").contains("M").click();
         return this;
     }
 
-    typeInpasswordConfirmationInputField(confirmPassword){
-        cy.get("#password-confirmation").clear().type(confirmPassword);
+    ChooseTheProductColor(){
+        cy.get(".swatch-attribute.color").find(".swatch-option").last().click();
         return this;
     }
 
-    clickOnCreateAccountButton(){
-        cy.get(".submit").click();
+    clickOnAddToCartButton(){
+        cy.get("#product-addtocart-button").click();
         return this;
     }
 
 }
 
-export default createAccountPageActions;
+export default addToCartPageActions;
